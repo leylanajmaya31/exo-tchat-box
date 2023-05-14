@@ -1,0 +1,100 @@
+main {
+    display: grid;
+    grid-template-areas: "head head head"
+                         "content content side"
+                         "foot foot foot"
+
+}
+
+header {
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+}
+
+article{
+    grid-area: content;
+    border: 1px solid blue;
+    border-radius: 3px;
+    display: block;
+    gap: 10px;
+}
+
+article:nth-of-type(1){
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(6,1fr);
+    width: 800px;
+}
+article:nth-of-type(1) p:nth-of-type(1){
+    grid-column: 1;
+    grid-row: 1;     
+}
+article:nth-of-type(1) p:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 2;     
+}
+article:nth-of-type(1) p:nth-of-type(3){
+    grid-column: 1;
+    grid-row: 3;     
+}
+article:nth-of-type(1) p:nth-of-type(4){
+    grid-column: 2;
+    grid-row: 4;     
+}
+article:nth-of-type(1) p:nth-of-type(5){
+    grid-column: 1;
+    grid-row: 5;     
+}
+article:nth-of-type(1) p:nth-of-type(6){
+    grid-column: 2;
+    grid-row: 6;     
+     }
+
+aside{
+    grid-area: side;
+    border: 1.5px solid blue;
+    border-radius: 3px;
+    width: 40%;
+    height: 25%;
+    display: block;
+    position: relative;
+    margin: auto 4rem;
+    
+}
+
+
+     ul li {
+        display: grid;
+        list-style-type: none;
+        display: flex;
+        margin-left: 1px;
+        
+     }
+
+     h4{
+        margin-left: 15%;
+     }
+
+section{
+    grid-area: foot;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+form input {
+    padding: 10px;
+
+}
+form input:nth-of-type(1) {
+    border-radius: 5px;
+    width: 660px;
+
+}
+form{
+    display: flex;
+    justify-content: center;
+    
+}
